@@ -26,8 +26,9 @@
 	url = https://github.com/projectopensea/seaport-sol
 [submodule "lib/seaport-types"]
 	path = lib/seaport-types
-	url = https://github.com/smemoshui/seaport-types
+	url = https://github.com/0xMCG/seaport-types
+	branch = main
 [submodule "lib/seaport-core"]
 	path = lib/seaport-core
-	url = https://github.com/smemoshui/seaport-core
-	branch = sme-poc
+	url = https://github.com/0xMCG/seaport-core
+	branch = main

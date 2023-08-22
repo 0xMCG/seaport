@@ -2,6 +2,7 @@
 pragma solidity ^0.8.4;
 
 import "forge-std/Script.sol";
+import "forge-std/console.sol";
 
 import { Seaport } from "contracts/Seaport.sol";
 
@@ -26,7 +27,7 @@ contract SeaportDeployer is Script {
         vm.startBroadcast(vm.envUint("PRIVATE_KEY"));
 
         // CREATE2 salt (20-byte caller or zero address + 12-byte salt).
-        bytes32 salt = 0x0000000000000000000000000000000000000000d4b6fcc21169b803f25d2229;
+        bytes32 salt = 0x0000000000000000000000000000000000000000d4b6fcc21169b803f25d5559;
 
         // Packed and ABI-encoded contract bytecode and constructor arguments.
         // NOTE: The Seaport contract *must* be compiled using the optimized profile config.
@@ -40,6 +41,7 @@ contract SeaportDeployer is Script {
 
         // Verify that the deployed contract address matches what we're expecting.
         // assert(seaport == SEAPORT_ADDRESS);
+        console.log(seaport);
 
         vm.stopBroadcast();
     }
