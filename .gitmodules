@@ -3,7 +3,7 @@
 	url = https://github.com/dmfxyz/murky
 [submodule "lib/openzeppelin-contracts"]
 	path = lib/openzeppelin-contracts
-	url = https://github.com/openzeppelin/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
 [submodule "lib/solmate"]
 	path = lib/solmate
 	url = https://github.com/transmissions11/solmate
@@ -21,12 +21,14 @@
 [submodule "lib/ds-test"]
 	path = lib/ds-test
 	url = https://github.com/dapphub/ds-test
-[submodule "lib/seaport-types"]
-	path = lib/seaport-types
-	url = https://github.com/projectopensea/seaport-types
-[submodule "lib/seaport-core"]
-	path = lib/seaport-core
-	url = https://github.com/projectopensea/seaport-core
 [submodule "lib/seaport-sol"]
 	path = lib/seaport-sol
 	url = https://github.com/projectopensea/seaport-sol
+[submodule "lib/seaport-types"]
+	path = lib/seaport-types
+	url = https://github.com/0xMCG/seaport-types
+	branch = main
+[submodule "lib/seaport-core"]
+	path = lib/seaport-core
+	url = https://github.com/0xMCG/seaport-core
+	branch = main

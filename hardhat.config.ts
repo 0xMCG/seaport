@@ -7,6 +7,7 @@ import { getReportPathForCommit } from "./scripts/utils";
 import { writeReports } from "./scripts/write_reports";
 
 import type { HardhatUserConfig } from "hardhat/config";
+const path = require("path");
 
 import "dotenv/config";
 import "@nomiclabs/hardhat-ethers";
@@ -75,7 +76,7 @@ const config: HardhatUserConfig = {
           optimizer: {
             ...(process.env.NO_SPECIALIZER
               ? optimizerSettingsNoSpecializer
-              : { enabled: true, runs: 4_294_967_295 }),
+              : { enabled: true, runs: 9_999_999 }),
           },
           metadata: {
             bytecodeHash: "none",
@@ -140,6 +141,9 @@ const config: HardhatUserConfig = {
     verificationNetwork: {
       url: process.env.NETWORK_RPC ?? "",
     },
+    sepolia: {
+      url: "https://eth-sepolia.public.blastapi.io"
+    }
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
@@ -148,7 +152,7 @@ const config: HardhatUserConfig = {
     noColors: true,
   },
   etherscan: {
-    apiKey: process.env.EXPLORER_API_KEY,
+    apiKey: "VCI1NXCY7ZJAKNS2FISH891X5SYZGJIW39",
   },
   // specify separate cache for hardhat, since it could possibly conflict with foundry's
   paths: { cache: "hh-cache" },
